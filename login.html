@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Database Access</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        #logo {
+            max-width: 30%;
+        }
+        #access-code {
+            font-size: 18px;
+            padding: 10px;
+        }
+        #access-button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img id="logo" src="torchwood logo.png" alt="Your Logo">
+    </div>
+    <div>
+        <form>
+            <label for="access-code">Enter Access Code:</label>
+            <input type="password" id="access-code" name="access-code">
+            <br>
+            <br>
+            <button type="button" id="access-button">Access Database</button>
+        </form>
+    </div>
+    <script>
+        // JavaScript code to handle access button click
+        document.getElementById("access-button").addEventListener("click", function () {
+            var accessCodeInput = document.getElementById("access-code").value;
+            if (accessCodeInput === "4562009") {
+                // Redirect to the main database page or perform other actions here
+                window.location.href = "main-database.html";
+            } else {
+                alert("Access code is incorrect. Please try again.");
+            }
+        });
+    </script>
+</body>
+</html>
